@@ -1,0 +1,226 @@
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box ;
+    font-family: 'Times New Roman', Times, serif';
+}
+:root{
+    --largeHeading : 1.3rem;
+    --smallHeading: 0.9 rem;
+    --lightColor: rgb(48,48,48);
+    --darkcolor:rgb(17,17,17);
+
+}
+html{
+
+    scroll-behavior: smooth;
+
+}
+body{
+     width: 100%;
+     height: 100vh;
+     display: flex;
+     justify-content:center ;
+     flex-direction: column;
+     background: linear-gradient(45 deg,rgb(9,172,131),rgb(72,64,136),rgb(175,11,66));
+     background-color: rgb(175,11,66);
+
+}
+/* THE CONTENT*/
+#content-container{
+     position: relative;
+     width: 290px;
+     margin: 0px auto;
+     padding: 25px;
+    border-radius: 10px;
+background-color: rgb(152,134,192);
+box-shadow: 0px 0px 5px rgb(19,14,14);
+}
+
+/* MAIN HEADING*/
+#container-heading{
+    margin: 0px auto 20px auto;
+    text-align: center;
+    font-size: var(--largeHeading);
+    font-weight: 540;
+     
+}
+
+/* CALCULATION*/
+
+#calculations-container{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 10px;
+     border-radius: 10px;
+     padding: 15px 25px;
+     color : var(--darkcolor);
+     font-size: var(--smallHeading);
+     background-color: rgb(22,91,241);
+     box-shadow: 0px 0px 3px grey;
+}
+
+/* CONTENT*/
+.content-division{
+     width: 100%;
+}
+
+/*SUB HEADING*/
+.division-heading{
+     display: inline-block;
+     position: relative;
+     left: 50%;
+     transform: translateX(-50%);
+     font-size: var(--smallHeading);
+     font-weight: 550;
+     color: var(--lightColor);
+     padding: 0px 5px;
+     margin: 5px 0px 10px 0px;
+}
+
+.division-heading::before{
+     position: absolute;
+     top: 50%;
+     left: 100%;
+     transform: translateY(-50%);
+     content: "";
+     width: 70px;
+     height: 1px;
+     background-color: var(--lightColor);
+}
+
+.division-heading::after{
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    content: "";
+    width: 70px;
+    height: 1px;
+    background-color: var(--lightColor);
+     
+}
+/* INPUT*/
+.inputs container{
+     display: grid;
+     grid-template-columns: 100%;
+     row-gap: 10px;
+}
+
+/* INPUT ELEMENTS*/
+.inputs{
+     width: 100%;
+     border: none;
+     outline: none;
+     border-radius: 3px;
+     font-size: var(--smallHeading);
+}
+
+/*FIELDS AND SELECT*/
+
+.input-field, .dropdown{
+     padding: 5px 10px;
+     font-family:'Segoe UI', sans-serif;
+     background-color: white;
+     box-shadow: 0px 0px 5px grey;
+
+}
+
+.dropdown,#convert-btn,footer a{
+     cursor: pointer;
+}
+
+/*DROPDOWN*/
+.dropdown-container{
+     position: relative;
+}
+
+.dropdown-container::after{
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: var(--smallHeading);
+    color: rgb(66,61,30);
+    content: "\25bc";
+    pointer-events: none;
+}
+
+/*DROPDOWN*/
+
+.dropdown{
+     appearance: none;
+}
+
+/*CLICKABLE*/
+
+#input-box{
+     transition: 0.2s;
+     box-shadow: 0px 0px 5px grey,inset 0px 0px 0px gold;
+}
+#input-box:focus{
+     box-shadow: 0px 0px 5px grey,inset 0px -4px 1px gold;
+
+}
+
+/*DISABLED*/
+#result-box{
+     background-color: rgb(255, 252, 207);
+}
+/*BUTTON*/
+#convert-btn{
+     margin: 10px 10px;
+     padding: 10px;
+     color: var(--lightColor);
+     background-color: orange;
+     box-shadow: 0px 0px 4px darkgoldenrod;
+}
+#convert-btn:hover{
+     background-color: gold;
+}
+
+#convert-btn:active{
+     background-color: orange;
+}
+
+/*FOOTER*/
+footer{
+     position: absolute;
+     width: 100%;
+     bottom: 5px;
+     font-size: 14px;
+     font-weight: 550;
+     color: var(--darkcolor);
+     text-align: center;
+     padding: 15px 0px;
+
+}
+
+/* LINK*/
+footer a{
+     text-decoration: none;
+     color: beige;
+
+}
+footer a:hover{
+     color: rgb(217, 255, 0);
+
+}
+
+/* LARGE MOBILES*/
+
+@media(min-width: 481px){
+     #content-container{
+         width: 360px;
+         padding: 25px 30px;
+     }
+     #calculations-container{
+         padding: 20px 30px;
+     }
+     .input-feild,.dropdown{
+         padding: 7px 10px;
+     }
+}
+
